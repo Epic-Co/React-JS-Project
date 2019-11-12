@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
-import Navbar from './components/Navbar.jsx'
-import Addevent from './components/Addevent.jsx'
+import Navbar from './components/navbar.js'
+import './App.css';
+import Addevent from './components/addEvents.js'
 import {Switch,BrowserRouter,Route} from 'react-router-dom';
-
+import Main from './components/mainPage.js';
 class App extends Component
 {
   constructor()
@@ -51,7 +52,10 @@ class App extends Component
     <div>
       <BrowserRouter>
         <Navbar/>
+        <Switch>
+        <Route exact path = "/" render={()=><Main event={this.state.events}/>}/> 
         <Route path = "/add" render={ () => <Addevent onAdd = { this.add }> </Addevent>}/>
+        </Switch>
       </BrowserRouter>
     </div>
   )
