@@ -4,6 +4,7 @@ import './App.css';
 import Addevent from './components/addEvents.js'
 import {Switch,BrowserRouter,Route} from 'react-router-dom';
 import Main from './components/mainPage.js';
+import Booking from './components/booking.js';
 class App extends Component
 {
   constructor()
@@ -11,7 +12,8 @@ class App extends Component
     super();
     this.state=(
       {
-        events:[]
+        events:[],
+
       }
     )
     this.add=this.add.bind(this);
@@ -53,8 +55,9 @@ class App extends Component
       <BrowserRouter>
         <Navbar/>
         <Switch>
-        <Route exact path = "/" render={()=><Main event={this.state.events}/>}/> 
+        <Route exact path = "/" render={()=><Main events={this.state.events}/>}/> 
         <Route path = "/add" render={ () => <Addevent onAdd = { this.add }> </Addevent>}/>
+        {/* <Route path="/booking" render={()=><Booking events={this.state.events}></Booking>}/> */}
         </Switch>
       </BrowserRouter>
     </div>
