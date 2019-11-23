@@ -12,7 +12,7 @@ class Navbar extends Component{
     render()
     {
         return(
-            <div className="container center">
+            <div className="container center" style={{maxWidth: "100%"}}>
             <nav className="menu">
                 <h1 style={{ backgroundImage:  'url('+ logo + ')'}}className="menu__logo">Epic Co.</h1>
     

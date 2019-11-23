@@ -10,14 +10,10 @@ export default class Main extends Component{
   constructor(props){
     super(props);
     this.state={
-      data:''   
+      cityEvents:[]    //cityEvents:this.props.events-->initialise the array empty
     }
- this.handleClick=this.handleClick.bind(this);
-this.goingBottom=this.goingBottom.bind(this); 
-  }
-  goingBottom(eve) {
-    document.body.scrollTop = 600;
-    document.documentElement.scrollTop = 600;
+    this.handleClick=this.handleClick.bind(this);
+    
   }
   handleKey=(e)=>{
     if (e.keyCode === 13) {
@@ -25,23 +21,50 @@ this.goingBottom=this.goingBottom.bind(this);
       document.getElementById("sear").click();
     }
   }
-  handleChange(e){
-     // e.preventDefault();
-      this.setState({data:e.target.value.substr(0,20)})
-  }
   handleClick(e){
-      e.preventDefault();
-      this.setState({data:this.state.data})
-      this.goingBottom();
+    console.log("hi");
+    e.preventDefault();
+    let data = document.querySelector('#searchInp').value;
+    /*this.setState((props)=>({cityEvents :props.events}) );
+    
+    //console.log(this.props.event);
+    // this.set+temp=this.props.event.filter((eve) => {return eve.id>2 })
+    // this.props.event.map((event,index)=>(
+    //   <Card key={index} events={event} ></Card>
+
+    let data = document.querySelector('#searchInp').value;
+   // console.log(this.props.event)
+    // check case sensitivity
+    let cityEvent = this.props.events.filter( (obj) => {return obj.city === data}) 
+    // this.props.event.filter((event,index)=>{
+    //   if(event.city==data)
+    //      this.state.eventf.push(event);
+    // })
+      this.setState({cityEvents: cityEvent})
+      console.log(this.state.cityEvents);
+      document.querySelector(".d2").innerHTML = "";
+    document.querySelector(".d2").innerHTML = this.state.cityEvents.map((event,index)=>
+     <Card key={index} events={event} ></Card>)
+    // document.querySelector(".d2").innerHTML = this.props.event.filter((event,index)=> { if (event.city === data) return <Card key={index} events={event} ></Card>})
+   //console.log(temp)
+   */
+     this.state.cityEvents=[]
+    this.props.events.filter((event,index)=>{
+      if(event.city===data)
+         this.state.cityEvents.push(event);
+    })
+    document.querySelector(".d2").innerHTML = "";
+    if(this.state.cityEvents=="")
+    document.querySelector(".d2").innerHTML="<p style='text-align:center;font-size:30px;padding:2px'>No results found</p>";
+    else
+    document.querySelector(".d2").innerHTML = this.state.cityEvents.map((event,index)=>
+     <Card key={index} events={event} ></Card>)
+   
   }
   render(){
-        let cityEvents=this.props.events.filter((event,index)=>{
-            return (
-              event.city.toLowerCase().indexOf(this.state.data.toLowerCase())!==-1||
-              event.fname.toLowerCase().indexOf(this.state.data.toLowerCase())!==-1||
-              event.fest.toLowerCase().indexOf(this.state.data.toLowerCase())!==-1
-            )
-        })
+      // setTimeout(()=>{
+                //without setTimeout with 1000 error comes ..i.e maximum exceeded
+            //
       return(
         <div class="container12">
             <div id="carousel" className="carousel slide" data-ride="carousel">
@@ -68,7 +91,7 @@ this.goingBottom=this.goingBottom.bind(this);
         </div>
         <div className="car-for">
               <input type="text" id="searchInp" placeholder="Search events and fests by name,city or type" name="search"
-                  onKeyUp={this.handleKey}  value={this.state.data} onChange={this.handleChange.bind(this)}/>
+                  onKeyUp={this.handleKey}/>
                <button onClick={this.handleClick} className="searBtn">
                <img id="sear" src={search} style={{height:"1.5vw"}} alt="not available" onClick={(e)=>this.handleClick}></img></button>
        </div>
@@ -91,10 +114,7 @@ this.goingBottom=this.goingBottom.bind(this);
         </div>
          <hr className="hr1"></hr>
         <div className="d2">
-            {
-              cityEvents.length>0?cityEvents.map((event,index)=><Card key={index} events={event} ></Card> ):
-              <p style={{textAlign:"center",fontSize:"3vw",padding:"2px",marginTop:"30vh"}}>No Results Found</p>
-            }
+            {this.props.events.map((event,index)=><Card key={index} events={event} ></Card> )}
         </div>
         <div className="d4">
 
