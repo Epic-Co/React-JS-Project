@@ -1,0 +1,81 @@
+{
+    "hotels": [
+     {
+         "link" : "https://cdn1.goibibo.com/image/fetch/t_fs/f_jpg/https://gos3.ibcdn.com/5h61bkokl152nfbmt2q8vlo5001h.jpg",
+         "name"  : "COUNTRY WOODS",
+         "city" : "AMBALA",
+         "state" : "HARYANA",
+         "phone" : "9847584567"
+     }  ,  
+     {
+        "link" : "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1511871325/Hotel/Goa/00015295/4285882_Facade_image_nlTR3A.jpg",
+        "name"  : "DeALTURAS",
+        "city" : "VADDO",
+        "state" : "GOA",
+        "phone" : "98364863837"
+    },  
+    {
+        "link" : "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1566206005/Hotel/00001847/Exterior_btZru3.jpg",
+        "name"  : "APPLE COUNTRY RESORT",
+        "city" : "MANALI",
+        "state" : "HIMACHAL PRADESH",
+        "phone" : "854836384949"
+    },    
+    {
+        "link" : "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1421838532/Domestic%20Hotels/Hotels_Amritsar/Hyatt%20Amritsar/Overview.jpg",
+        "name"  : "HYATT REGENCY",
+        "city" : "AMRITSAR",
+        "state" : "PUNJAB",
+        "phone" : "8594048484"
+    },    
+    {
+        "link" : "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1435838178/Domestic%20Hotels/Hotels_Jaipur/Park%20Prime/Pool.jpg",
+        "name"  : "PARK PRIME",
+        "city" : "JAIPUR",
+        "state" : "RAJASTHAN",
+        "phone" : "9464835R4"
+    },    
+    {
+        "link" : "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1436587479/Domestic%20Hotels/Hotels_Srinagar/Lake%20Victoria%20Houseboat/Overview.jpg",
+        "name"  : "LAKE VICTORIA HOUSEBOATS",
+        "city" : "SRINAGAR",
+        "state" : "JAMMU",
+        "phone" : "924374648474"
+    },    
+    {
+        "link" : "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1501579375/Hotel/Zirakpur/00011193/Facade_CICrhP.jpg",
+        "name"  : "THE GOLDEN PLAZA HOTEL AND SPA",
+        "city" : "ZIRAKPUR",
+        "state" : "CHANDIGARH",
+        "phone" : "9475883738"
+    },    
+    {
+        "link" : "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1497005929/Hotel/Mumbai/00007327/1552803-007_FK5e7r.jpg",
+        "name"  : "HOTEL SUBA INTERNATIONAL",
+        "city" : "MUMBAI",
+        "state" : "MAHARASHTRA",
+        "phone" : "9474748283"
+    },    
+    {
+        "link" : "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1508247829/Hotel/00002014/1_Facade_9043_4_CC2CF_Zj2hNf.jpg",
+        "name"  : "THE GOLKONDA",
+        "city" : "BANJARA HILL",
+        "state" : "HYDERABAD",
+        "phone" : "9448474838"
+    },    
+    {
+        "link" : "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1499325022/Hotel/Bengaluru/00018206/Hotel_Facade_tPOtLj.jpg",
+        "name"  : "HOWARD JOHNSON",
+        "city" : "HEBBAL",
+        "state" : "BANGLORE",
+        "phone" : "944848488"
+    }, 
+    {
+        "link" : "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1486103137/Domestic%20Hotels/Hotels_New%20Delhi/Hotel%20The%20Royal%20Plaza/Swimming_pool.jpg",
+        "name"  : "THE ROYAL PLAZA",
+        "city" : "DELHIL",
+        "state" : "DELHI",
+        "phone" : "7844938393"
+    }    
+    ]
+}
